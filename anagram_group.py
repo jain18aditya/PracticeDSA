@@ -1,3 +1,24 @@
+"""
+Problem:
+Given an array of strings words, group all anagrams together. You may return the answer in any order.
+
+Two strings are anagrams if they contain the same characters with the same frequency.
+
+Example:
+
+Input: ["eat","tea","tan","ate","nat","bat"]
+Output: [["eat","tea","ate"],["tan","nat"],["bat"]]
+
+
+Constraints:
+
+1 ≤ words.length ≤ 10^4
+
+0 ≤ words[i].length ≤ 100
+
+words[i] consists of lowercase English letters
+"""
+
 from collections import defaultdict
 
 def group_anagrams(words):

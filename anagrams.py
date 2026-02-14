@@ -1,11 +1,20 @@
-from collections import Counter
+"""
+Problem:
+Given two strings a and b, return True if b is an anagram of a, otherwise return False.
 
-a = "abcdefghz"
-b = "abdcegfzh"
+Two strings are anagrams if they contain the same characters with the same frequency.
+
+Example:
+
+Input: a = "listen", b = "silent"
+Output: True
+
+"""
+
+from collections import Counter
 
 def anagram_sorted(a, b):
     return sorted(a) == sorted(b)
-
 
 def anagrams_loop(a, b):
     def find_group(s):
@@ -31,6 +40,9 @@ def anagrams_word_counter(a, b):
         count[ord(ch) - ord('a')] -= 1
 
     return all(x==0 for x in count)
+
+a = "abcdefghz"
+b = "abdcegfzh"
 
 print(anagrams_word_counter(a, b))
 print(anagram_counter(a, b))
