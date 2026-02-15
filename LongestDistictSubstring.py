@@ -1,3 +1,17 @@
+"""
+Question:
+Given a string, find the longest substring without repeating characters.
+Return the substring itself (not just the length).
+
+Example:
+Input:  "adityaditykmaditaypc"
+Output: "tykmad"
+(Actual result may vary depending on string)
+
+Approach:
+Use Sliding Window + HashSet to track characters in current window.
+If duplicate found, shrink window from left until duplicate is removed.
+"""
 
 def longest_distinct_substring(s):
     seen = set()

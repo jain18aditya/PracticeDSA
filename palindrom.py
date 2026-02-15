@@ -1,4 +1,36 @@
-from turtledemo.penrose import start
+"""
+Problem: Check if a String is a Palindrome
+
+Given a string, determine whether it is a palindrome.
+
+A palindrome is a string that reads the same forward and backward.
+
+Return:
+- True if the string is a palindrome
+- False otherwise
+
+Requirements:
+- Implement a function using the two-pointer technique.
+- Implement another function using Python slicing.
+- The comparison should be character by character.
+- Assume case-sensitive comparison unless specified otherwise.
+
+Example:
+Input:  "adida"
+Output: True
+
+Input:  "aditya"
+Output: False
+
+Approach 1 (Two-Pointer):
+- Start one pointer at the beginning and one at the end.
+- Compare characters while moving inward.
+- If any mismatch occurs → not a palindrome.
+
+Approach 2 (Slicing):
+- Reverse the string using slicing.
+- Compare original string with reversed string.
+"""
 
 s="aditya"
 

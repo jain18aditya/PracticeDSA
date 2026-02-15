@@ -1,5 +1,23 @@
-from collections import Counter
+"""
+Implement Basic Sorting Algorithms
 
+Given an unsorted list of integers, implement the following sorting algorithms
+to sort the array in ascending order:
+
+1. Bubble Sort
+2. Selection Sort
+3. Insertion Sort
+
+Requirements:
+- Sort the array in-place.
+- Do not use built-in sorting functions.
+- Preserve correctness for duplicate and zero values.
+- Return the sorted array.
+
+Example:
+Input:  [2, 5, 7, 8, 5, 6, 3, 8, 0]
+Output: [0, 2, 3, 5, 5, 6, 7, 8, 8]
+"""
 
 def bubble_sort(arr):
     for i in range(len(arr)-1):
@@ -32,14 +50,3 @@ arr = [2,5,7,8,5,6,3,8,0,2,5,8,3,2,6,8,8,5,4,6]
 print(bubble_sort(arr))
 print(selection_sort(arr))
 print(insertion_sort(arr))
-
-
-def sort_char_by_frequency(s):
-    arr = Counter(s)
-    sorted_freq = sorted(arr.keys(), key=lambda x: arr[x], reverse=True)
-    print(sorted_freq)
-    sorted_freq = "".join([ch*arr[ch] for ch in sorted_freq])
-    return sorted_freq
-
-print(sort_char_by_frequency("tree"))
-

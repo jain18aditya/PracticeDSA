@@ -10,6 +10,7 @@ from collections import Counter
 def k_frequent(nums, k):
     frequency = Counter(nums)
     frequency = sorted(frequency.items(), key=lambda x: x[1], reverse=True)
+    print(frequency)
     return [num[0] for num in frequency[:k]]
 
 def topKFrequent_heap(nums, k):

@@ -1,3 +1,34 @@
+"""
+Problem: Merge Two Sorted Linked Lists
+
+You are given the heads of two singly linked lists, both sorted in
+non-decreasing order. Merge the two lists into one sorted linked list
+and return the head of the merged list.
+
+The merged list should be created by reusing the existing nodes
+(splice together the nodes of the first two lists).
+
+Requirements:
+- The input linked lists are already sorted.
+- The output linked list must also be sorted.
+- Do not create new nodes for values; reuse existing nodes.
+- Handle edge cases where one or both lists are empty.
+
+Example:
+Input:
+List 1: 1 -> 3 -> 5 -> 7
+List 2: 2 -> 4 -> 6 -> 8
+
+Output:
+Merged List: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
+
+Approach:
+Use an iterative method with a dummy node. Compare the current nodes
+of both lists and attach the smaller node to the merged list, moving
+forward until one list is exhausted. Then attach the remaining nodes
+of the other list.
+"""
+
 # Definition for singly-linked list
 class ListNode:
     def __init__(self, val=0, next=None):

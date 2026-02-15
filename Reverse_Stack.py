@@ -1,3 +1,30 @@
+"""
+Problem: Reverse a String
+
+Given a string, reverse the order of its characters and return the reversed string.
+
+Implement two approaches:
+
+1. Reverse using a Stack (LIFO — Last In, First Out)
+2. Reverse using Python slicing
+
+Requirements:
+- Return a new reversed string.
+- Do not modify the original string.
+- Handle empty string and single-character string.
+- Maintain character integrity (case-sensitive, no trimming).
+
+Example:
+Input:  "aditya"
+Output: "aytida"
+
+Approach 1 (Stack):
+- Push all characters onto a stack.
+- Pop characters one by one and build the reversed string.
+
+Approach 2 (Slicing):
+- Use Python slicing syntax [::-1] to reverse the string directly.
+"""
 
 def reverse_stack(arr):
     stack = []
