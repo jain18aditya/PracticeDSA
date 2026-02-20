@@ -47,8 +47,17 @@ def remove_duplicates_using_pointer(nums):
             i+=1
     return nums[:start+1]
 
+def remove_duplicate_inplace(nums):
+    start = 1
+    for i in range(len(nums)-1):
+        if nums[i] != nums[i-1]:
+            nums[start] = nums[i]
+            start += 1
+    return nums[:start+1]
 
 nums = [0,0,0,1,1,2,2,2,3,4]
 print(remove_duplicates_using_pop(nums))
 print("remove_duplicates_using_pointer")
 print(remove_duplicates_using_pointer(nums))
+print("remove_duplicate_inplace")
+print(remove_duplicate_inplace(nums))

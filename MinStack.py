@@ -18,7 +18,7 @@ class MinStack:
             self.min_stack.append(val)
 
     def top(self):
-        return self.min_stack[-1]
+        return self.stack[-1]
 
     def get_min(self):
         return self.min_stack[-1]
