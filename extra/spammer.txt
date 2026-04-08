@@ -1,0 +1,3 @@
+1000,userA,tweet,t1
+1500,userB,retweet,t2,t1
+1800,userB,retweet,t3,t1
