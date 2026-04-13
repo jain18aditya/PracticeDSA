@@ -24,8 +24,6 @@ Constraints
 1 <= nums.length <= 10^4
 0 <= nums[i] <= 10^5
 """
-from bit_manipulation import count_bits
-
 
 class Solution:
     def jump(self, nums):

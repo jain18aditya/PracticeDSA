@@ -94,6 +94,21 @@ class Solution:
             stack.append((temp, i))
         return answer
 
+def sol(temperatures: List[int]) -> List[int]:
+    result = [0] * len(temperatures)
+    stack = []
+
+    for i in range(len(temperatures)):
+        while stack and temperatures[stack[-1]] < temperatures[i]:
+            prev = stack.pop()
+            result[prev] = i - prev
+        stack.append(i)
+    return result
+
+
+print(f"Output from sol {sol([73,74,75,71,69,76,72,73])}")
+
 temperatures = [73,74,75,71,69,76,72,73]
 solution = Solution()
-print(solution.dailyTemperatures(temperatures))
+print(f"Output from dailyTemperatures {solution.dailyTemperatures(temperatures)}")
+

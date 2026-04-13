@@ -53,6 +53,29 @@ def two_sum(num, target):
             high-=1
     return False
 
-arr = [1,2,3,4,5,6,8,7]
-print(two_sum(arr, 15))
 
+def optimized_two_sum_index(nums, target):
+    seen = {}
+    result = set()
+    for i, num in enumerate(nums):
+        complement = target - num
+        if complement in seen:
+            result.add((nums[seen[complement]], nums[i]))
+        seen[num] = i
+    return result
+
+def optimized_two_sum(nums, target):
+    seen = []
+    result = []
+    for num in nums:
+        compliment = target - num
+        if compliment in seen:
+            result.append((compliment, num))
+        seen.append(num)
+    return result
+arr = [1,2,3,4,5,6,8,7]
+
+
+print(two_sum(arr, 15))
+print(optimized_two_sum(arr, 15))
+print(optimized_two_sum_index(arr, 15))

@@ -53,3 +53,26 @@ def findDuplicate(nums):
     return output
 
 findDuplicate(nums)
+
+
+def findDuplicate2(nums):
+    seen = set()
+    result = []
+    for num in nums:
+        if num not in seen:
+            seen.add(num)
+        else:
+            result.append(num)
+    return result
+
+def findDuplicate3(nums):
+    dup_dict = {}
+    output = set()
+    for num in nums:
+        dup_dict[num]= dup_dict.get(num, 0)+1
+        if dup_dict[num]>1:
+            output.add(num)
+    return list(output)
+
+print(findDuplicate2(nums))
+print(findDuplicate3(nums))
