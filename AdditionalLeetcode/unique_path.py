@@ -34,12 +34,9 @@ class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
         dp=[]
         for _ in range(m):
-            dp.append([0]*n)
-        dp[0][0]=1
-        for i in range(m):
-            for j in range(n):
-                if i == j == 0:
-                    continue
+            dp.append([1]*n)
+        for i in range(1, m):
+            for j in range(1, n):
                 dp[i][j] = dp[i-1][j] + dp[i][j-1]
         return dp[m-1][n-1]
 
@@ -47,3 +44,4 @@ solution = Solution()
 print(solution.uniquePaths(3, 3))
 print(solution.uniquePaths(3, 7))
 print(solution.uniquePaths(3, 2))
+print(solution.uniquePaths(3, 3))

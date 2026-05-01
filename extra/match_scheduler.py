@@ -78,7 +78,7 @@ def schedule_tournament(players):
 
         # If no match could be scheduled → constraints cannot be satisfied
         if not match_scheduled:
-            return None
+            print("No valid schedule possible under given constraints.")
 
         day += 1  # Move to next day
 
