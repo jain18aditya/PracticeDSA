@@ -34,7 +34,7 @@ Input:
 ]
 
 Output:
-6
+5
 
 Explanation:
 The largest island has area = 6 (6 connected 1s)

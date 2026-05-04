@@ -27,21 +27,33 @@ Compare nums1[i] and nums2[j] and place the larger element at nums1[k].
 Move pointers accordingly until all elements of nums2 are merged.
 """
 
+def merge(nums1, m, nums2, n):
+
+    i = m - 1          # last valid element in nums1
+    j = n - 1          # last element in nums2
+    k = m + n - 1      # last position in nums1
+
+    while i >= 0 and j >= 0:
+
+        if nums1[i] > nums2[j]:
+            nums1[k] = nums1[i]
+            i -= 1
+        else:
+            nums1[k] = nums2[j]
+            j -= 1
+
+        k -= 1
+
+    # remaining nums2 elements
+    while j >= 0:
+        nums1[k] = nums2[j]
+        j -= 1
+        k -= 1
+    return nums1
+
 nums1 = [1,2,3,0,0,0]
 m = 3
 nums2 = [2,5,6]
 n = 3
-i=m-1
-j=n-1
-k=m+n-1
 
-while j>=0:
-    if i>=0 and nums1[i]>nums2[j]:
-        nums1[k] = nums1[i]
-        i=i-1
-    else:
-        nums1[k]=nums2[j]
-        j=j-1
-    k=k-1
-
-print(nums1)
+print(merge(nums1, m, nums2, n))

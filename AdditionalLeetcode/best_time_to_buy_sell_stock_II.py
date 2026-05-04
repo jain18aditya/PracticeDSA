@@ -4,6 +4,7 @@ LeetCode 122 — Best Time to Buy and Sell Stock II
 
 You are given an integer array prices where prices[i] is the price of a given stock on the i-th day.
 
+
 On each day, you may decide to:
 
 Buy the stock
@@ -47,8 +48,6 @@ No profitable transactions possible
 class Solution:
     def maxProfit(self, prices):
         i = 0
-        low = prices[0]
-        high = prices[0]
         profit = 0
 
         while i < len(prices)-1:
